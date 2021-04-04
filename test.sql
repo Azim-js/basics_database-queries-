@@ -148,3 +148,11 @@ SELECT * FROM employee ORDER BY salary DESC;
 -- TASk find all employees orderd by SEX and name
 
 SELECT * FROM employee ORDER BY sex,first_name,last_name;
+
+-- TASK find first_name and last_name of all salary
+
+SELECT first_name,last_name from employee;
+
+-- TAsk find the forename and surname of all employee `branch`
+
+SELECT first_name AS forename , last_name AS surname FROM employee;
