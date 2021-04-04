@@ -156,3 +156,7 @@ SELECT first_name,last_name from employee;
 -- TAsk find the forename and surname of all employee `branch`
 
 SELECT first_name AS forename , last_name AS surname FROM employee;
+
+-- TASK  to find different genders using DISTINCT keyword
+
+SELECT DISTINCT sex FROM employee;
