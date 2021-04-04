@@ -173,3 +173,19 @@ SELECT DISTINCT branch_id FROM employee;
 -- TASK Find the number of employees 
 
 SELECT COUNT(emp_id) FROM employee;
+
+-- TAsk to find number of supervisor in emplyoee;
+
+SElECT COUNT(super_id) FROM employee;
+
+-- TASk to find number of female employee born after 1970 `branch`
+
+SELECT COUNT(emp_id) FROM employee WHERE sex='F' AND birth_day >'1970-01-01';
+
+-- AVG FUNC()
+-- TASK tol find the avg of salary of all the employee
+SELECT AVG(salary) FROM employee;
+
+-- TASK to find avg of salary of all male `employee'
+
+SELECT AVG(salary) FROM employee WHERE sex='M';
