@@ -160,3 +160,8 @@ SELECT first_name AS forename , last_name AS surname FROM employee;
 -- TASK  to find different genders using DISTINCT keyword
 
 SELECT DISTINCT sex FROM employee;
+
+
+-- TAsk to find different branch_id from employee table
+
+SELECT DISTINCT branch_id FROM employee;
