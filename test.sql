@@ -198,3 +198,19 @@ SELECT SUM(salary) FROM employee;
 -- TASK to find how many males and females there are
 
 SELECT COUNT(sex),sex FROM employee GROUP BY sex;
+
+
+-- ------------------------ AGGREGATION -------------------------------
+
+-- TASK to find how many males and females there are
+
+SELECT COUNT(sex),sex FROM employee GROUP BY sex;
+
+
+-- TAsk to find the tootal sales of salesman 
+
+SELECT SUM(total_Sales),emp_id FROM works_with GROUP BY emp_id;
+
+-- TAsk to find how much each client has spent
+
+SELECT SUM(total_sales),client_id FROM works_with GROUP BY client_id;
