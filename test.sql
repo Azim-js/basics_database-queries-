@@ -189,3 +189,12 @@ SELECT AVG(salary) FROM employee;
 -- TASK to find avg of salary of all male `employee'
 
 SELECT AVG(salary) FROM employee WHERE sex='M';
+
+
+-- SUM () FUNCTION ()
+
+SELECT SUM(salary) FROM employee;
+
+-- TASK to find how many males and females there are
+
+SELECT COUNT(sex),sex FROM employee GROUP BY sex;
