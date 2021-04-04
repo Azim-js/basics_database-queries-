@@ -165,3 +165,11 @@ SELECT DISTINCT sex FROM employee;
 -- TAsk to find different branch_id from employee table
 
 SELECT DISTINCT branch_id FROM employee;
+
+
+-- ---------------------------------------------------------------   FUNCTIONS    ------------------------------------------------------------------------------
+
+-- COUNT FUNC()
+-- TASK Find the number of employees 
+
+SELECT COUNT(emp_id) FROM employee;
