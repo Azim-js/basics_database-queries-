@@ -257,3 +257,7 @@ SELECT client_name,branch_id FROM client  UNION SELECT supplier_name,branch_id F
 -- 2 similar Datatype 
 
 SELECT client_name,client.branch_id From client UNION SELECT supplier_name,branch_supplier.branch_id FROM branch_supplier; --recommended 
+
+-- Task  to find a list of all money spent or caused by company `branch`
+
+SELECT salary FROM employee UNION SELECT total_sales FROM works_with;
