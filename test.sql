@@ -291,3 +291,12 @@ SELECT employee.emp_id,employee.first_name,branch.branch_name
 FROM employee -- left table
 LEFT JOIN branch -- right table
 ON employee.emp_id=branch.mgr_id;
+
+-- RIGHT JOIN ON 
+
+-- TAsk to find all branches and names of thier names
+
+SELECT employee.emp_id,employee.first_name,branch.branch_name 
+FROM employee 
+RIGHT JOIN branch 
+ON employee.emp_id=branch.mgr_id;
