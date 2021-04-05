@@ -240,3 +240,10 @@ SELECT * FROM employee WHERE birth_day LIKE '____-02%';
 --Task to find any clients who are schools 
 
 SELECT * FROM client WHERE client_name LIKE '%school%';
+
+-- --------------------------------------------- UNIONS -----------------------------
+-- in sql UNION is a special operator USED to combine two or more SELECT statements 
+
+-- TAsk to find list of all employee and branch names 
+
+SELECT first_name  AS company_names FROM employee UNION SELECT branch_name FROM branch;
