@@ -214,3 +214,25 @@ SELECT SUM(total_Sales),emp_id FROM works_with GROUP BY emp_id;
 -- TAsk to find how much each client has spent
 
 SELECT SUM(total_sales),client_id FROM works_with GROUP BY client_id;
+
+
+
+------------------------------------- WILD CARDS ---------------------------------------
+
+-- % = any character , _ = one character
+
+-- TAsk to find any clients who are LLC
+
+SELECT * FROM client WHERE client_name LIKE '%LLC';
+
+-- TAsk to find any branch supplier who are in Label businnes
+
+SElECT * FROM branch_supplier WHERE supplier_name LIKE '% Label%';
+
+-- TAsk to find any employee born in October
+
+SELECT * FROM employee WHERE birth_day LIKE '____-10%';
+
+-- TAsk to find any employee born in feb
+
+SELECT * FROM employee WHERE birth_day LIKE '____-02%';
