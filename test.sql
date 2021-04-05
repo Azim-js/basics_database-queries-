@@ -261,3 +261,23 @@ SELECT client_name,client.branch_id From client UNION SELECT supplier_name,branc
 -- Task  to find a list of all money spent or caused by company `branch`
 
 SELECT salary FROM employee UNION SELECT total_sales FROM works_with;
+
+-- ---------------------------------------------- JOINS --------------------------------------
+-- Join is basically used to combine two or more rows of differenttables on related columns
+
+INSERT INTO branch VALUES(4,'Buffalo',NULL,NULL);
+
+-- 4 TYPES of JOINS 
+-- 1. General JOIN - Inner JOIN
+-- 2.LEFT JOIN
+-- 3. RIGHT JOIN
+-- 4. OUTER JOIN 
+
+-- GENERAL JOIN -JOIN ON (coloumns)
+
+-- TAsk to find all branches and the names of their managers
+
+SELECT employee.emp_id,employee.first_name,branch.branch_name
+FROM employee -- left tabble
+JOIN branch  -- right table
+ON employee.emp_id=branch.mgr_id;
