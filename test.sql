@@ -313,3 +313,19 @@ FROM employee
 WHERE employee.emp_id IN(
     SELECT works_with.emp_id FROM works_with WHERE works_with.total_sales>30000
 );
+
+-- TAsk to find all Cllients who are handeled by the `branch`
+-- that michael Scott Manages
+-- Assume you know MIchales ID
+
+-- STEP 1
+
+SELECT branch.branch_id FROM branch WHERE branch.mgr_id=102;
+
+-- STEP 2
+
+SELECT client.client_name FROM client 
+WHERE client.branch_id=(
+    SELECT branch.branch_id FROM branch WHERE branch.mgr_id=102
+    LIMIT 1
+);
