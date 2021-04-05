@@ -236,3 +236,7 @@ SELECT * FROM employee WHERE birth_day LIKE '____-10%';
 -- TAsk to find any employee born in feb
 
 SELECT * FROM employee WHERE birth_day LIKE '____-02%';
+
+--Task to find any clients who are schools 
+
+SELECT * FROM client WHERE client_name LIKE '%school%';
