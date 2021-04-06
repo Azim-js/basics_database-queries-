@@ -39,3 +39,25 @@ DELIMITER ;
 INSERT INTO employee VALUES(110,'kevin','malve','1978-02-19','M',69000,106,3);
 
 SELECT * FROM trigger_set;
+
+-- TRIGGER 3
+-- complex trigger wit if ,else if ,else conditions
+
+DELIMITER $$
+
+CREATE TRIGGER my_trigger3 BEFORE INSERT ON employee
+    FOR EACH ROW BEGIN
+        IF NEW.sex='M' THEN
+            INSERT INTO trigger_set VALUES('MALE employee');
+        ELSEIF NEW.sex='F' THEN
+            INSERT INTO trigger_set VALUES('FEMALE employee');
+        ELSE 
+            INSERT INTO trigger_set VALUES('OTHER employee');
+        END IF;
+    END $$
+
+DELIMITER ;
+
+INSERT INTO employee VALUES(111,'PAM','BEELY','1998-02-19','F',69000,106,3);
+
+SELECT * from trigger_set;
