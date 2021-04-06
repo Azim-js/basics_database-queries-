@@ -23,3 +23,19 @@ DELIMITER ;
 INSERT INTO employee VALUES(109,'Oscar','Martiinez','1969-02-19','M',69000,106,3);
 
 SELECT * FROM trigger_set;
+
+
+-- TRIGGER 2
+
+DELIMITER $$
+
+CREATE TRIGGER my_trigger2 BEFORE INSERT ON employee 
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_set VALUES(NEW.first_name);
+    END $$
+
+DELIMITER ;
+
+INSERT INTO employee VALUES(110,'kevin','malve','1978-02-19','M',69000,106,3);
+
+SELECT * FROM trigger_set;
