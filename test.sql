@@ -355,3 +355,20 @@ DELETE FROM employee WHERE emp_id=102; -- sets mgr id = null in branch when dele
 SELECT * FROM branch; -- results affected
 
 SELECT * FROM employee;
+
+-- ON DELETE CASCADE
+-- is used to delete a row based on relation on foregin key
+
+-- CREATE TABLE branch_supplier(
+--     branch_id INT,
+--     supplier_name VARCHAR(40),
+--     supply_type VARCHAR(40),
+--     PRIMARY KEY(branch_id,supplier_name), -- composite key
+--     FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE
+-- );
+
+DELETE FROM branch WHERE branch_id=2;  
+
+-- deleteing the branch with branch_id =2 affects the branch supplier as branch supplier is connected to the branch table
+
+SELECT * FROM branch_supplier;
