@@ -10,3 +10,16 @@ CREATE TABLE trigger_set(
 );
 
 -- seting up a trigger for trigger_Set table
+
+DELIMITER $$
+
+CREATE TRIGGER my_trigger BEFORE INSERT ON employee
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_set VALUES("new employee added");
+    END $$
+
+DELIMITER ; 
+
+INSERT INTO employee VALUES(109,'Oscar','Martiinez','1969-02-19','M',69000,106,3);
+
+SELECT * FROM trigger_set;
