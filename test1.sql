@@ -68,3 +68,8 @@ SELECT * from trigger_set;
 -- BEFORE DELETE
 -- AFTER INSERT
 -- AFTER DELETE
+
+
+-- DELETEING A TRIGGER
+
+DROP TRIGGER my_trigger;
