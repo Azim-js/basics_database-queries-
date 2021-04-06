@@ -329,3 +329,29 @@ WHERE client.branch_id=(
     SELECT branch.branch_id FROM branch WHERE branch.mgr_id=102
     LIMIT 1
 );
+
+
+-- --------------------------------------------- ON DELETE -------------------------------------------------------
+
+-- CREATE TABLE branch(
+--     branch_id INT PRIMARY KEY,
+--     branch_name VARCHAR(40),
+--     mgr_id INT,
+--     mgr_start_date Date,
+--     FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+-- )
+
+-- DELETEING ENTRIES WHEN WE HAVE FOREGIN KEY LINKED UP 
+
+-- TYPES OF ON DELETE
+-- ON DELETE SET NULL
+-- ON DELETE CASADE
+
+
+-- FOREGIN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL;
+
+DELETE FROM employee WHERE emp_id=102; -- sets mgr id = null in branch when deleted in employee;
+
+SELECT * FROM branch; -- results affected
+
+SELECT * FROM employee;
